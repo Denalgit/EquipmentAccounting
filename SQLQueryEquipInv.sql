@@ -9,7 +9,7 @@ GO
 USE [EQUIPMENT_ACCOUNTING]
 GO
 
--- Таблицы 
+-- РўР°Р±Р»РёС†С‹ 
 CREATE TABLE [dbo].[Provider](
 [IdProvider] [integer] IDENTITY(1,1) PRIMARY KEY NOT NULL,
 [CompanyName] [nvarchar](40) COLLATE Cyrillic_General_CS_AS NOT NULL,
@@ -122,24 +122,24 @@ CREATE TABLE [dbo].[UserAccount](
 )
 GO
 
---Добавление данных в таблицу "Поставщик"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РџРѕСЃС‚Р°РІС‰РёРє"
 INSERT INTO dbo.Provider(CompanyName, CompanyPhone, FioRepresent)
 VALUES
-('ООО "ПромСнаб"', '+7(953)353-24-24', 'Карбазов А.О.'),
-('ООО "Вертекс"', '+7(953)352-34-71', 'Патрушев В.О.'),
-('U-Technology Group', '+7(956)752-21-76', 'Баринов Б.А.')
+('РћРћРћ "РџСЂРѕРјРЎРЅР°Р±"', '+7(953)353-24-24', 'РљР°СЂР±Р°Р·РѕРІ Рђ.Рћ.'),
+('РћРћРћ "Р’РµСЂС‚РµРєСЃ"', '+7(953)352-34-71', 'РџР°С‚СЂСѓС€РµРІ Р’.Рћ.'),
+('U-Technology Group', '+7(956)752-21-76', 'Р‘Р°СЂРёРЅРѕРІ Р‘.Рђ.')
 GO
---Добавление данных в таблицу "Сотрудник"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РЎРѕС‚СЂСѓРґРЅРёРє"
 INSERT INTO dbo.Employee(FioEmployee, DateBirth, Position, Address)
 VALUES
-('Иванов А.Г.', '04.08.1989', 'Заведующий складом', 'ул. Строителей, д.3, кв. 59'),
-('Логинов Б.А.', '01.09.1996', 'Кладовщик', 'ул. Баумана, д.55, кв. 55'),
-('Карлов Д.В.', '12.04.2000', 'Кладовщик', 'ул. Пролетарская, д.12, кв.12'),
-('Александров Р.С.', '07.03.1996', 'Кладовщик', 'ул. Радищева, д.34, кв.34'),
-('Петров А.А.', '02.05.1991', 'Кладовщик', 'ул. Ленина, д.53, кв 53')
+('РРІР°РЅРѕРІ Рђ.Р“.', '04.08.1989', 'Р—Р°РІРµРґСѓСЋС‰РёР№ СЃРєР»Р°РґРѕРј', 'СѓР». РЎС‚СЂРѕРёС‚РµР»РµР№, Рґ.3, РєРІ. 59'),
+('Р›РѕРіРёРЅРѕРІ Р‘.Рђ.', '01.09.1996', 'РљР»Р°РґРѕРІС‰РёРє', 'СѓР». Р‘Р°СѓРјР°РЅР°, Рґ.55, РєРІ. 55'),
+('РљР°СЂР»РѕРІ Р”.Р’.', '12.04.2000', 'РљР»Р°РґРѕРІС‰РёРє', 'СѓР». РџСЂРѕР»РµС‚Р°СЂСЃРєР°СЏ, Рґ.12, РєРІ.12'),
+('РђР»РµРєСЃР°РЅРґСЂРѕРІ Р .РЎ.', '07.03.1996', 'РљР»Р°РґРѕРІС‰РёРє', 'СѓР». Р Р°РґРёС‰РµРІР°, Рґ.34, РєРІ.34'),
+('РџРµС‚СЂРѕРІ Рђ.Рђ.', '02.05.1991', 'РљР»Р°РґРѕРІС‰РёРє', 'СѓР». Р›РµРЅРёРЅР°, Рґ.53, РєРІ 53')
 GO
 
---Добавление данных в таблицу "Отдел"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РћС‚РґРµР»"
 INSERT INTO dbo.Department(DepartNumber, DepartmentPhone)
 VALUES
 ('a55','43-43'),
@@ -148,17 +148,17 @@ VALUES
 ('35','62-62')
 GO
 
---Добавление данных в таблицу "Справочник оборудования"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РЎРїСЂР°РІРѕС‡РЅРёРє РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ"
 INSERT INTO dbo.EquipDirectory(EquipName, Price, Weight)
 VALUES
-('Процессор', 20000, 0.1),
-('Материнская плата', 5000, 1),
-('Компьютерная мышь', 500, 0.2),
-('Видеокарта', 40000, 0.9),
-('Монитор', 15000, 2.5)
+('РџСЂРѕС†РµСЃСЃРѕСЂ', 20000, 0.1),
+('РњР°С‚РµСЂРёРЅСЃРєР°СЏ РїР»Р°С‚Р°', 5000, 1),
+('РљРѕРјРїСЊСЋС‚РµСЂРЅР°СЏ РјС‹С€СЊ', 500, 0.2),
+('Р’РёРґРµРѕРєР°СЂС‚Р°', 40000, 0.9),
+('РњРѕРЅРёС‚РѕСЂ', 15000, 2.5)
 GO
 
---Добавление данных в таблицу "Оборудование"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РћР±РѕСЂСѓРґРѕРІР°РЅРёРµ"
 INSERT INTO dbo.Equipment(IdNameEquip, Quantity)
 VALUES
 (1, 5),
@@ -167,7 +167,7 @@ VALUES
 (4, 6),
 (5, 12)
 GO
---Добавление данных в таблицу "Заказ"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "Р—Р°РєР°Р·"
 INSERT INTO dbo.[Order](IdProvider, IdEmployee, IdEquipment, Quantity, Value, OrderDate)
 VALUES
 (1, 2, 1, 2, 40000, '03.07.2022'),
@@ -176,7 +176,7 @@ VALUES
 (2, 2, 4, 5, 200000, '04.07.2022'),
 (3, 4, 5, 5, 75000, '05.07.2022')
 GO
---Добавление данных в таблицу "Приход"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РџСЂРёС…РѕРґ"
 INSERT INTO dbo.Coming(IdOrder, IdEmployee, IdEquipment, InvoiseNumber, Quantity, DeliveryDate)
 VALUES
 (1, 2, 1, 503, 2, '07.07.2022'),
@@ -185,7 +185,7 @@ VALUES
 (4, 2, 4, 506, 5, '10.07.2022'),
 (5, 4, 5, 507, 5, '10.07.2022')
 GO
---Добавление данных в таблицу "Заявка"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "Р—Р°СЏРІРєР°"
 INSERT INTO dbo.Application(IdDepartment, IdEmployee, IdEquipment, Quantity, ApplicationDate, ExecutionStatus)
 VALUES
 (3, 4, 1, 1, '11.07.2022', 1),
@@ -193,7 +193,7 @@ VALUES
 (1, 3, 2, 1, '12.07.2022', 1),
 (1, 2, 1, 2, '13.07.2022', 0)
 GO
---Добавление данных в таблицу "Расход"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "Р Р°СЃС…РѕРґ"
 INSERT INTO dbo.Consumption(IdApplication, IdEmployee, IdEquipment, Quantity, ConsumptionDate)
 VALUES
 (1, 2, 2, 1, '11.07.2022'),
@@ -201,14 +201,14 @@ VALUES
 (3, 3, 2, 1, '13.07.2022')
 GO
 
---Добавление данных в таблицу "Списание"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РЎРїРёСЃР°РЅРёРµ"
 INSERT INTO dbo.WriteOff(IdEmployee, IdEquipment, Quantity, WriteOffDate)
 VALUES
 (1, 1, 2, '11.07.2022'),
 (1, 2, 1, '12.07.2022')
 
 GO
---Добавление данных в таблицу "Остаток"
+--Р”РѕР±Р°РІР»РµРЅРёРµ РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ "РћСЃС‚Р°С‚РѕРє"
 INSERT INTO dbo.Balance(IdEquipment, Quantity, BalanceFixationDate)
 VALUES
 (1, 4, '31.05.2022'),
@@ -237,10 +237,10 @@ GO
 CREATE TRIGGER u_coming ON Coming 
 INSTEAD OF INSERT 
 AS 
-SET NOCOUNT ON; --Нет необходимости выводить количество обработанных строк.
+SET NOCOUNT ON; 
 BEGIN
 
---Объявляю временную таблицу с полями, аналогичными ComResult (кроме первичного ключа).
+
 	DECLARE @ComResult TABLE 
 	(
 		[IdOrder][integer] NOT NULL,
@@ -250,7 +250,7 @@ BEGIN
 		[Quantity] [nvarchar](10) NULL,
 		[DeliveryDate] [nvarchar](20) NULL
 	)
---Переписываю в таблицу только что добавленные данные.
+
 	INSERT INTO @ComResult (IdOrder, IdEmployee, IdEquipment, InvoiseNumber, Quantity, DeliveryDate)
 	SELECT
 		I.[IdOrder],
@@ -308,10 +308,9 @@ GO
 CREATE TRIGGER u_Consumption ON Consumption 
 INSTEAD OF INSERT 
 AS 
-SET NOCOUNT ON; --Нет необходимости выводить количество обработанных строк.
+SET NOCOUNT ON; 
 BEGIN
 
---Объявляю временную таблицу с полями, аналогичными ComResult (кроме первичного ключа).
 	DECLARE @ComResult TABLE 
 	(
 		[IdApplication][integer] NOT NULL,
@@ -321,7 +320,6 @@ BEGIN
 		[ConsumptionDate] [nvarchar](20) NULL
 	);
 
---Переписываю в таблицу только что добавленные данные.
 	INSERT INTO @ComResult (IdApplication, IdEmployee, IdEquipment, Quantity, ConsumptionDate)
 	SELECT
 		I.[IdApplication],
@@ -374,10 +372,9 @@ GO
 CREATE TRIGGER u_WriteOff  ON WriteOff 
 INSTEAD OF INSERT 
 AS 
-SET NOCOUNT ON; --Нет необходимости выводить количество обработанных строк.
+SET NOCOUNT ON; 
 BEGIN
 
---Объявляю временную таблицу с полями, аналогичными ComResult (кроме первичного ключа).
 	DECLARE @ComResult TABLE 
 	(
 		[IdEquipment] [integer] NOT NULL,
@@ -386,7 +383,6 @@ BEGIN
 		[WriteOffDate] [nvarchar](20) NULL
 	);
 
---Переписываю в таблицу только что добавленные данные.
 	INSERT INTO @ComResult (IdEquipment, IdEmployee, Quantity, WriteOffDate)
 	SELECT
 		I.[IdEquipment], 
